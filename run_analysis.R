@@ -9,7 +9,7 @@ download.file(fileUrl, destfile = zip_name)
 ## Save the date of download
 DateDownloaded = date()
 
-## Read all necessary data from zipped archive, add column names to y and subject
+## Read all necessary data from zipped archive
 activity_labels <- read.table(unz(zip_name, "UCI HAR Dataset/activity_labels.txt"), stringsAsFactors = FALSE)
 features <- read.table(unz(zip_name, "UCI HAR Dataset/features.txt"), stringsAsFactors = FALSE)
 x_test <- read.table(unz(zip_name, "UCI HAR Dataset/test/X_test.txt"))
